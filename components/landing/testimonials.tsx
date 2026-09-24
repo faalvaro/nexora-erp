@@ -52,7 +52,7 @@ export function Testimonials() {
           {testimonials.map((item) => (
             <article
               key={item.key}
-              className="rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="flex h-full flex-col rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="flex items-center gap-1 text-amber-400">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -64,11 +64,11 @@ export function Testimonials() {
                 ))}
               </div>
 
-              <p className="mt-5 text-sm leading-7 text-slate-600">
+              <p className="mt-5 min-h-[112px] text-sm leading-7 text-slate-600">
                 “{item.quote}”
               </p>
 
-              <div className="mt-6 flex items-center gap-4">
+              <div className="mt-auto flex items-center gap-4 pt-6">
                 <div className="relative h-14 w-14 overflow-hidden rounded-full">
                   <Image
                     src={item.image}

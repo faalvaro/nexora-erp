@@ -18,9 +18,9 @@ export function FAQ() {
       answer: t("items.whatIs.answer"),
     },
     {
-      key: "custom",
-      question: t("items.custom.question"),
-      answer: t("items.custom.answer"),
+      key: "included",
+      question: t("items.included.question"),
+      answer: t("items.included.answer"),
     },
     {
       key: "multiBranch",
@@ -28,9 +28,9 @@ export function FAQ() {
       answer: t("items.multiBranch.answer"),
     },
     {
-      key: "security",
-      question: t("items.security.question"),
-      answer: t("items.security.answer"),
+      key: "custom",
+      question: t("items.custom.question"),
+      answer: t("items.custom.answer"),
     },
     {
       key: "try",
@@ -40,15 +40,18 @@ export function FAQ() {
   ];
 
   return (
-    <section className="bg-white py-24">
-      <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[0.7fr_1.3fr] lg:px-8">
+    <section
+      id="faq"
+      className="scroll-mt-20 bg-white py-24"
+    >
+      <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:px-8">
         {/* LEFT */}
-        <div>
+        <div className="lg:sticky lg:top-28">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#1597E5]">
             {t("eyebrow")}
           </p>
 
-          <h2 className="mt-4 text-4xl font-semibold tracking-[-0.035em] text-slate-950 sm:text-5xl">
+          <h2 className="mt-4 max-w-[520px] text-4xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-[46px] sm:leading-[1.05]">
             {t("title")}
           </h2>
 
@@ -64,9 +67,9 @@ export function FAQ() {
               <AccordionItem
                 key={faq.key}
                 value={`item-${index}`}
-                className="border-slate-200"
+                className="border-slate-200 last:border-b-0"
               >
-                <AccordionTrigger className="py-5 text-left text-base font-medium text-slate-900 hover:no-underline">
+                <AccordionTrigger className="py-5 text-left text-base font-semibold text-slate-950 hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
 

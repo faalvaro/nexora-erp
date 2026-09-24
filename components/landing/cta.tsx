@@ -16,12 +16,13 @@ export function CTA() {
           <div className="absolute -bottom-24 right-10 size-80 rounded-full bg-white/10 blur-3xl" />
 
           <div className="relative flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
+            {/* LEFT */}
             <div className="max-w-2xl">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-white/75">
                 {t("eyebrow")}
               </p>
 
-              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.035em] text-white sm:text-5xl">
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
                 {t("title")}
               </h2>
 
@@ -30,10 +31,11 @@ export function CTA() {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            {/* ACTIONS */}
+            <div className="flex flex-wrap gap-3 lg:shrink-0">
               <Link
                 href="#pricing"
-                className="inline-flex h-12 items-center gap-2 rounded-xl bg-white px-6 text-sm font-semibold text-slate-950 shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-50"
+                className="inline-flex h-12 items-center gap-2 rounded-full bg-white px-6 text-sm font-semibold text-slate-950 shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-50"
               >
                 {t("freeTrial")}
                 <ArrowRight size={16} />
@@ -41,7 +43,7 @@ export function CTA() {
 
               <Link
                 href="#demo"
-                className="inline-flex h-12 items-center rounded-xl border border-white/30 bg-white/10 px-6 text-sm font-semibold text-white backdrop-blur transition-all duration-200 hover:bg-white/20"
+                className="inline-flex h-12 items-center rounded-full border border-white/30 bg-white/10 px-6 text-sm font-semibold text-white backdrop-blur transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/20"
               >
                 {t("demo")}
               </Link>

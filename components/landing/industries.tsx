@@ -44,28 +44,24 @@ export function Industries() {
 
   return (
     <section
-      id="company"
-      className="bg-slate-50/70 py-24"
+      id="solutions"
+      className="scroll-mt-20 bg-slate-50/70 py-24"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           {/* LEFT */}
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#1597E5]">
               {t("eyebrow")}
             </p>
 
-            <h2 className="mt-4 max-w-xl text-4xl font-semibold tracking-[-0.035em] text-slate-950 sm:text-5xl">
+            <h2 className="mt-4 max-w-xl text-4xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-5xl">
               {t("title")}
             </h2>
 
             <p className="mt-5 max-w-lg text-base leading-7 text-slate-600">
               {t("description")}
             </p>
-
-            <button className="mt-7 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-slate-800 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md">
-              {t("viewAll")} →
-            </button>
           </div>
 
           {/* RIGHT */}
@@ -76,7 +72,7 @@ export function Industries() {
               return (
                 <article
                   key={industry.key}
-                  className="group rounded-[26px] border border-slate-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/50"
+                  className="group rounded-[26px] border border-slate-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-200 hover:shadow-xl hover:shadow-slate-200/40"
                 >
                   <div
                     className={`flex size-12 items-center justify-center rounded-2xl ${industry.accent}`}
@@ -91,10 +87,6 @@ export function Industries() {
                   <p className="mt-2 text-sm leading-6 text-slate-500">
                     {industry.description}
                   </p>
-
-                  <button className="mt-5 text-sm font-medium text-slate-800 transition-colors group-hover:text-[#1597E5]">
-                    {t("learnMore")} →
-                  </button>
                 </article>
               );
             })}

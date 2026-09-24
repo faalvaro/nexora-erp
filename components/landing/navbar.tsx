@@ -382,7 +382,7 @@ export function Navbar() {
                   >
                     <div className="ml-3 flex flex-col border-l border-slate-200 py-2 pl-3">
                       <MobileLink
-                        href="#company"
+                        href="#solutions"
                         onClick={closeMobile}
                       >
                         {t(
@@ -391,7 +391,7 @@ export function Navbar() {
                       </MobileLink>
 
                       <MobileLink
-                        href="#company"
+                        href="#solutions"
                         onClick={closeMobile}
                       >
                         {t(
@@ -400,7 +400,7 @@ export function Navbar() {
                       </MobileLink>
 
                       <MobileLink
-                        href="#company"
+                        href="#solutions"
                         onClick={closeMobile}
                       >
                         {t(
@@ -604,17 +604,17 @@ function SolutionsMegaMenu({
 
         <div className="mt-4 grid grid-cols-2 gap-1">
           <MegaItem
-            href="#company"
+            href="#solutions"
             title={t("solutionsMenu.fnb")}
           />
 
           <MegaItem
-            href="#company"
+            href="#solutions"
             title={t("solutionsMenu.retail")}
           />
 
           <MegaItem
-            href="#company"
+            href="#solutions"
             title={t("solutionsMenu.services")}
           />
 

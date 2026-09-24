@@ -2,7 +2,10 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Check, Sparkles } from "lucide-react";
+import {
+  Check,
+  Sparkles,
+} from "lucide-react";
 
 type PlanKey = "starter" | "business" | "custom";
 
@@ -22,9 +25,9 @@ const plans: PlanConfig[] = [
     yearly: "Rp 0",
     featured: false,
     featureKeys: [
-      "basicPos",
-      "productManagement",
-      "simpleReporting",
+      "pos",
+      "inventory",
+      "reporting",
       "oneBranch",
       "fiveUsers",
     ],
@@ -35,7 +38,7 @@ const plans: PlanConfig[] = [
     yearly: "Rp 2.990.000",
     featured: true,
     featureKeys: [
-      "starter",
+      "core",
       "multiBranch",
       "inventory",
       "analytics",
@@ -61,16 +64,18 @@ const plans: PlanConfig[] = [
 ];
 
 export function Pricing() {
-  const [billing, setBilling] = useState<"monthly" | "yearly">("monthly");
+  const [billing, setBilling] =
+    useState<"monthly" | "yearly">("monthly");
+
   const t = useTranslations("Pricing");
 
   return (
     <section
       id="pricing"
-      className="relative overflow-hidden bg-white py-24"
+      className="scroll-mt-20 relative overflow-hidden bg-white py-24"
     >
-      {/* Background glow */}
-      <div className="absolute left-1/2 top-0 h-[350px] w-[700px] -translate-x-1/2 rounded-full bg-sky-100/40 blur-3xl" />
+      {/* Background */}
+      <div className="absolute left-1/2 top-0 h-[360px] w-[760px] -translate-x-1/2 rounded-full bg-sky-100/40 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Heading */}
@@ -79,7 +84,7 @@ export function Pricing() {
             {t("eyebrow")}
           </p>
 
-          <h2 className="mt-4 text-4xl font-semibold tracking-[-0.035em] text-slate-950 sm:text-5xl">
+          <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-5xl">
             {t("title")}
           </h2>
 
@@ -89,12 +94,12 @@ export function Pricing() {
         </div>
 
         {/* Billing Toggle */}
-        <div className="mt-10 flex justify-center">
-          <div className="inline-flex rounded-2xl border border-slate-200 bg-slate-50 p-1">
+        <div className="mt-9 flex justify-center">
+          <div className="inline-flex rounded-full border border-slate-200 bg-slate-50 p-1">
             <button
               type="button"
               onClick={() => setBilling("monthly")}
-              className={`rounded-xl px-5 py-2.5 text-sm font-medium transition-all ${
+              className={`rounded-full px-5 py-2 text-sm font-semibold transition-all ${
                 billing === "monthly"
                   ? "bg-white text-slate-950 shadow-sm"
                   : "text-slate-500 hover:text-slate-800"
@@ -106,7 +111,7 @@ export function Pricing() {
             <button
               type="button"
               onClick={() => setBilling("yearly")}
-              className={`rounded-xl px-5 py-2.5 text-sm font-medium transition-all ${
+              className={`rounded-full px-5 py-2 text-sm font-semibold transition-all ${
                 billing === "yearly"
                   ? "bg-white text-slate-950 shadow-sm"
                   : "text-slate-500 hover:text-slate-800"
@@ -117,104 +122,102 @@ export function Pricing() {
           </div>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        {/* Plans */}
+        <div className="mt-12 grid gap-5 lg:grid-cols-3 lg:items-stretch">
           {plans.map((plan) => (
             <article
               key={plan.key}
-              className={`relative flex h-full flex-col rounded-[28px] border p-7 transition-all duration-300 ${
+              className={`relative flex h-full flex-col rounded-[28px] border bg-white p-7 transition-all duration-300 sm:p-8 ${
                 plan.featured
-                  ? "border-[#1597E5] bg-white shadow-[0_25px_70px_rgba(21,151,229,0.16)] lg:-translate-y-3"
-                  : "border-slate-200 bg-white shadow-sm hover:-translate-y-1 hover:shadow-xl"
+                  ? "border-[#1597E5] shadow-[0_24px_65px_rgba(21,151,229,0.12)]"
+                  : "border-slate-200 shadow-sm hover:-translate-y-1 hover:shadow-lg"
               }`}
             >
-              {/* Featured Badge */}
+              {/* Popular */}
               {plan.featured && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <div className="flex items-center gap-2 rounded-full bg-[#1597E5] px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-sky-500/20">
-                    <Sparkles size={14} />
+                    <Sparkles size={13} />
                     {t("mostPopular")}
                   </div>
                 </div>
               )}
 
-              <div
-                className={`flex h-full flex-col ${
-                  plan.featured ? "pt-3" : ""
+              {/* Header */}
+              <div className={plan.featured ? "pt-2" : ""}>
+                <h3 className="text-xl font-semibold tracking-tight text-slate-950">
+                  {t(`plans.${plan.key}.name`)}
+                </h3>
+
+                <p className="mt-2 min-h-[48px] text-sm leading-6 text-slate-500">
+                  {t(`plans.${plan.key}.description`)}
+                </p>
+
+                {/* Price */}
+                <div className="mt-7 flex items-end gap-1">
+                  <span className="text-4xl font-semibold tracking-[-0.04em] text-slate-950">
+                    {plan.hasCustomPrice
+                      ? t("plans.custom.priceLabel")
+                      : billing === "monthly"
+                        ? plan.monthly
+                        : plan.yearly}
+                  </span>
+
+                  {!plan.hasCustomPrice && (
+                    <span className="pb-1 text-sm text-slate-400">
+                      /
+                      {billing === "monthly"
+                        ? t("monthSuffix")
+                        : t("yearSuffix")}
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              <div className="my-7 h-px bg-slate-100" />
+
+              {/* Feature label */}
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.12em] text-slate-400">
+                {t("includedLabel")}
+              </p>
+
+              {/* Features */}
+              <div className="space-y-4">
+                {plan.featureKeys.map((featureKey) => (
+                  <div
+                    key={featureKey}
+                    className="flex items-start gap-3"
+                  >
+                    <div className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                      <Check size={12} strokeWidth={3} />
+                    </div>
+
+                    <p className="text-sm leading-6 text-slate-600">
+                      {t(
+                        `plans.${plan.key}.features.${featureKey}`,
+                      )}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <button
+                type="button"
+                className={`mt-8 w-full rounded-full px-5 py-3.5 text-sm font-semibold transition-all duration-200 lg:mt-auto ${
+                  plan.featured
+                    ? "bg-[#1597E5] text-white shadow-lg shadow-sky-500/20 hover:bg-[#0F86CC]"
+                    : "border border-slate-200 bg-white text-slate-800 hover:border-sky-200 hover:text-[#1597E5]"
                 }`}
               >
-                <div>
-                  <p className="text-lg font-semibold text-slate-950">
-                    {t(`plans.${plan.key}.name`)}
-                  </p>
-
-                  <p className="mt-2 text-sm leading-6 text-slate-500">
-                    {t(`plans.${plan.key}.description`)}
-                  </p>
-
-                  {/* Price */}
-                  <div className="mt-7">
-                    <div className="flex items-end gap-1">
-                      <span className="text-4xl font-semibold tracking-tight text-slate-950">
-                        {plan.hasCustomPrice
-                          ? t("plans.custom.priceLabel")
-                          : billing === "monthly"
-                            ? plan.monthly
-                            : plan.yearly}
-                      </span>
-
-                      {!plan.hasCustomPrice && (
-                        <span className="pb-1 text-sm text-slate-400">
-                          /
-                          {billing === "monthly"
-                            ? t("monthSuffix")
-                            : t("yearSuffix")}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="my-7 h-px bg-slate-100" />
-
-                  {/* Features */}
-                  <div className="space-y-4">
-                    {plan.featureKeys.map((featureKey) => (
-                      <div
-                        key={featureKey}
-                        className="flex items-start gap-3"
-                      >
-                        <div className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
-                          <Check size={12} strokeWidth={3} />
-                        </div>
-
-                        <p className="text-sm leading-6 text-slate-600">
-                          {t(
-                            `plans.${plan.key}.features.${featureKey}`,
-                          )}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* CTA */}
-                <button
-                  type="button"
-                  className={`mt-auto w-full rounded-xl px-5 py-3.5 text-sm font-medium transition-all duration-200 ${
-                    plan.featured
-                      ? "bg-[#1597E5] text-white shadow-lg shadow-[#1597E5]/20 hover:bg-[#0F86CC]"
-                      : "border border-slate-200 bg-white text-slate-800 hover:border-sky-200 hover:text-[#1597E5]"
-                  }`}
-                >
-                  {t(`plans.${plan.key}.button`)}
-                </button>
-              </div>
+                {t(`plans.${plan.key}.button`)}
+              </button>
             </article>
           ))}
         </div>
 
-        {/* Pricing Note */}
-        <p className="mt-8 text-center text-xs text-slate-400">
+        {/* Note */}
+        <p className="mx-auto mt-8 max-w-2xl text-center text-xs leading-5 text-slate-400">
           {t("note")}
         </p>
       </div>

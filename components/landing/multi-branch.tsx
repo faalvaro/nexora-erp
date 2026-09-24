@@ -64,9 +64,14 @@ export function MultiBranch() {
       <div className="relative mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:px-8">
         {/* LEFT CONTENT */}
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#1597E5]">
-            {t("eyebrow")}
-          </p>
+  <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-100 bg-white px-3.5 py-1.5 text-xs font-semibold text-[#1597E5] shadow-sm">
+    <span className="size-2 rounded-full bg-[#1597E5]" />
+    {t("eyebrow")}
+  </div>
+
+  <h2 className="max-w-xl text-4xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-5xl">
+    {t("title")}
+  </h2>
 
           <h2 className="mt-4 max-w-xl text-4xl font-semibold tracking-[-0.035em] text-slate-950 sm:text-5xl">
             {t("title")}
@@ -88,7 +93,7 @@ export function MultiBranch() {
             ))}
           </div>
 
-          <button className="mt-8 inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-slate-800 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-sky-200 hover:text-[#1597E5] hover:shadow-md">
+          <button className="mt-8 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-sky-200 hover:text-[#1597E5] hover:shadow-md">
             {t("button")}
             <ArrowUpRight size={16} />
           </button>

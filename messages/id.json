@@ -8,42 +8,39 @@
     "freeTrial": "Coba Gratis"
   },
   "Hero": {
-    "badge": "ERP Modern untuk Bisnis Indonesia",
-    "titleLine1": "Kelola Semua",
-    "titleLine2": "Operasional Bisnis",
-    "titleLine3": "dalam Satu Platform",
-    "description": "Nexora ERP membantu bisnis mengelola penjualan, stok, pelanggan, laporan, dan operasional secara lebih mudah, efisien, dan terintegrasi dalam satu platform.",
-    "startFreeTrial": "Coba Gratis",
-    "requestDemo": "Minta Demo",
-    "easyToUse": "Mudah digunakan",
-    "noCreditCard": "Tanpa kartu kredit",
-    "localSupport": "Dukungan lokal",
-    "ownerAlt": "Pemilik bisnis menggunakan Nexora ERP",
-    "quote": "Nexora sangat membantu kami mengelola banyak cabang dengan lebih efisien.",
-    "quoteAuthor": "Raka, Pemilik Kedai Kopi",
-    "dashboard": {
-      "dashboard": "Dashboard",
-      "sales": "Penjualan",
-      "products": "Produk",
-      "customers": "Pelanggan",
-      "purchases": "Pembelian",
-      "finance": "Keuangan",
-      "reports": "Laporan",
-      "totalSales": "Total Penjualan",
-      "totalSalesValue": "Rp 124,5 jt",
-      "transactions": "Transaksi",
-      "transactionsValue": "1.430",
-      "productStock": "Stok Produk",
-      "productStockValue": "892",
-      "runningLow": "12 menipis",
-      "customersMetric": "Pelanggan",
-      "customersValue": "1.024",
-      "last30Days": "Penjualan 30 Hari Terakhir",
-      "performance": "Performa transaksi bisnis",
-      "salesByCategory": "Kategori Penjualan",
-      "services": "Jasa"
-    }
-  },
+  "badge": "Satu Produk. Kontrol Bisnis Lengkap.",
+  "titleLine1": "Kelola Penjualan,",
+  "titleLine2": "Stok & Operasional",
+  "titleLine3": "dalam Satu Sistem",
+  "description": "Nexora ERP menyatukan kasir, inventory, pelanggan, laporan, dan operasional multi-cabang dalam satu produk lengkap tanpa modul terpisah.",
+  "startFreeTrial": "Coba Gratis",
+  "requestDemo": "Minta Demo",
+  "easyToUse": "Mudah digunakan",
+  "noCreditCard": "Tanpa kartu kredit",
+  "localSupport": "Dukungan lokal",
+  "dashboard": {
+    "dashboard": "Dashboard",
+    "sales": "Penjualan",
+    "products": "Produk",
+    "customers": "Pelanggan",
+    "purchases": "Pembelian",
+    "finance": "Keuangan",
+    "reports": "Laporan",
+    "totalSales": "Total Penjualan",
+    "totalSalesValue": "Rp 124,5 jt",
+    "transactions": "Transaksi",
+    "transactionsValue": "1.430",
+    "productStock": "Stok Produk",
+    "productStockValue": "892",
+    "runningLow": "12 menipis",
+    "customersMetric": "Pelanggan",
+    "customersValue": "1.024",
+    "last30Days": "Penjualan 30 Hari Terakhir",
+    "performance": "Performa transaksi bisnis",
+    "salesByCategory": "Kategori Penjualan",
+    "services": "Jasa"
+  }
+},
   "TrustedBy": {
     "trustedText": "Dipercaya oleh bisnis di seluruh Indonesia",
     "learnMore": "Pelajari lebih lanjut",
@@ -92,106 +89,103 @@
     }
   },
   "Modules": {
-    "eyebrow": "Ekosistem Terintegrasi",
-    "title": "Semua yang Anda Butuhkan untuk Mengelola Bisnis",
-    "description": "Modul Nexora ERP saling terhubung untuk membantu seluruh operasional bisnis berjalan dalam satu platform yang lebih sederhana dan efisien.",
-    "bottomNote": "Semua modul dapat digunakan secara terintegrasi dalam satu sistem.",
-    "items": {
-      "pos": {
-        "title": "POS & Kasir",
-        "description": "Transaksi cepat dan fleksibel."
-      },
-      "inventory": {
-        "title": "Inventory",
-        "description": "Pantau stok secara real-time."
-      },
-      "purchasing": {
-        "title": "Pembelian",
-        "description": "Kelola supplier dan purchase order."
-      },
-      "accounting": {
-        "title": "Akuntansi",
-        "description": "Laporan keuangan lebih terstruktur."
-      },
-      "crm": {
-        "title": "CRM & Pelanggan",
-        "description": "Kelola dan pahami pelanggan."
-      },
-      "hr": {
-        "title": "HR & Karyawan",
-        "description": "Kelola data dan aktivitas tim."
-      },
-      "loyalty": {
-        "title": "Loyalty & Promosi",
-        "description": "Tingkatkan hubungan pelanggan."
-      },
-      "orders": {
-        "title": "Order Management",
-        "description": "Kelola pesanan dalam satu sistem."
-      },
-      "analytics": {
-        "title": "Analitik & Laporan",
-        "description": "Dapatkan insight performa bisnis secara real-time."
-      },
-      "multiBranch": {
-        "title": "Multi-Cabang",
-        "description": "Kelola banyak cabang dengan lebih mudah."
-      },
-      "custom": {
-        "title": "Solusi Kustom",
-        "description": "Sesuaikan sistem dengan kebutuhan bisnis."
-      },
-      "api": {
-        "title": "Integrasi API",
-        "description": "Hubungkan Nexora dengan sistem lainnya."
+  "eyebrow": "SATU PRODUK, SISTEM LENGKAP",
+  "title": "Semua yang Bisnis Anda Butuhkan, Sudah Ada di Nexora ERP",
+  "description": "Mulai dari kasir dan inventory hingga pelanggan, laporan, dan operasional multi-cabang, seluruh kemampuan utama bekerja bersama dalam satu produk terintegrasi.",
+
+  "groups": {
+    "sales": {
+      "title": "Penjualan & Kasir",
+      "description": "Kelola transaksi harian dan aktivitas penjualan dengan cepat dalam satu sistem yang saling terhubung.",
+      "items": {
+        "pos": "POS & Kasir",
+        "orders": "Manajemen Pesanan",
+        "loyalty": "Loyalty & Promosi"
+      }
+    },
+    "inventory": {
+      "title": "Inventory & Persediaan",
+      "description": "Hubungkan stok, pembelian, dan pergerakan produk langsung dengan aktivitas penjualan harian.",
+      "items": {
+        "inventory": "Manajemen Inventory",
+        "purchasing": "Pembelian",
+        "stock": "Kontrol Stok Real-time"
+      }
+    },
+    "customers": {
+      "title": "Pelanggan & Tim",
+      "description": "Kelola hubungan pelanggan dan operasional internal tanpa berpindah-pindah sistem.",
+      "items": {
+        "crm": "CRM & Pelanggan",
+        "hr": "HR & Karyawan",
+        "customerData": "Manajemen Pelanggan"
+      }
+    },
+    "insights": {
+      "title": "Insight & Kontrol Bisnis",
+      "description": "Ubah data operasional menjadi laporan yang lebih jelas dan kontrol bisnis yang terpusat.",
+      "items": {
+        "analytics": "Analitik & Laporan",
+        "accounting": "Akuntansi",
+        "multiBranch": "Manajemen Multi-Cabang"
       }
     }
   },
+
+  "bottomNote": "Satu produk Nexora ERP. Seluruh kemampuan utama bekerja bersama tanpa modul terpisah."
+},
   "ProductShowcase": {
-    "badge": {
-      "title": "Transaksi lebih cepat",
-      "subtitle": "dengan layanan pelanggan yang lebih baik"
-    },
-    "eyebrow": "Fitur Unggulan",
-    "title": "POS Modern untuk Pengalaman Transaksi yang Lebih Baik",
-    "description": "Antarmuka yang intuitif, mendukung berbagai metode pembayaran, dan dapat digunakan secara lancar baik online maupun offline.",
-    "button": "Lihat Fitur POS",
-    "imageAlt": "Pemilik bisnis menggunakan sistem POS",
-    "benefits": {
-      "easy": "Mudah digunakan oleh seluruh tim",
-      "receipts": "Mendukung struk digital dan cetak",
-      "integration": "Terintegrasi dengan stok dan laporan"
-    }
+  "eyebrow": "PRODUK DALAM AKSI",
+  "title": "Dari Kasir hingga Inventory, Semuanya Tetap Terhubung",
+  "description": "Nexora ERP menghubungkan penjualan, inventory, dan data operasional dalam satu alur kerja sehingga tim Anda tidak perlu berpindah-pindah sistem.",
+
+  "benefits": {
+    "easy": "Proses kasir cepat dan sederhana untuk transaksi harian",
+    "receipts": "Stok otomatis diperbarui setiap terjadi penjualan",
+    "integration": "Laporan penjualan dan operasional selalu tersinkronisasi"
   },
+
+  "button": "Lihat Nexora ERP",
+
+  "imageAlt": "Sistem kasir dan inventory Nexora ERP",
+
+  "badge": {
+    "title": "Satu Sistem Terhubung",
+    "subtitle": "Penjualan, inventory, dan laporan"
+  }
+},
   "MultiBranch": {
-    "eyebrow": "Manajemen Multi-Cabang",
-    "title": "Kelola Semua Cabang dari Satu Dashboard",
-    "description": "Kelola banyak lokasi, outlet, gudang, dan tim dalam satu sistem. Nexora ERP membantu Anda memantau seluruh operasional bisnis dari berbagai cabang secara terpusat.",
-    "button": "Pelajari Multi-Cabang",
-    "benefits": {
-      "reporting": "Laporan per cabang dan konsolidasi",
-      "transfer": "Transfer stok antar cabang",
-      "monitoring": "Pantau performa secara real-time",
-      "access": "Kelola pengguna dan hak akses"
-    },
-    "dashboard": {
-      "title": "Performa Cabang",
-      "subtitle": "Ringkasan performa seluruh lokasi",
-      "period": "Bulan Ini",
-      "totalBranches": "Total Cabang",
-      "totalSales": "Total Penjualan",
-      "activeBranches": "Cabang Aktif",
-      "branch": "Cabang",
-      "sales": "Penjualan",
-      "transactions": "Transaksi",
-      "growth": "Pertumbuhan",
-      "status": "Status",
-      "active": "Aktif",
-      "updated": "Data diperbarui secara real-time",
-      "viewReport": "Lihat laporan lengkap",
-      "totalSalesValue": "Rp 402 jt"
-    }
+  "eyebrow": "DIRANCANG UNTUK OPERASIONAL MULTI-CABANG",
+  "title": "Pantau Seluruh Cabang dari Satu Tampilan Terpusat",
+  "description": "Manajemen multi-cabang sudah terintegrasi langsung di Nexora ERP, sehingga pemilik bisnis dapat memantau penjualan, perpindahan stok, performa cabang, dan akses tim dari satu tempat.",
+
+  "benefits": {
+    "reporting": "Laporan per cabang dan laporan gabungan bisnis",
+    "transfer": "Transfer stok antar outlet dan lokasi",
+    "monitoring": "Pantau performa seluruh cabang secara real-time",
+    "access": "Kelola peran pengguna dan akses secara terpusat"
   },
+
+  "button": "Lihat Multi-Cabang",
+
+  "dashboard": {
+    "title": "Performa Cabang",
+    "subtitle": "Ringkasan terpusat seluruh lokasi",
+    "period": "Bulan Ini",
+    "totalBranches": "Total Cabang",
+    "totalSales": "Total Penjualan",
+    "totalSalesValue": "Rp 402 jt",
+    "activeBranches": "Cabang Aktif",
+    "branch": "Cabang",
+    "sales": "Penjualan",
+    "transactions": "Transaksi",
+    "growth": "Pertumbuhan",
+    "status": "Status",
+    "active": "Aktif",
+    "updated": "Data diperbarui secara real-time",
+    "viewReport": "Lihat laporan lengkap"
+  }
+},
   "Pricing": {
     "eyebrow": "Harga",
     "title": "Paket yang Tumbuh Bersama Bisnis Anda",
@@ -393,6 +387,47 @@
     "socialDemo": "{provider} Sign In masih menggunakan mode demo.",
     "forgotPassword": "Fitur lupa password belum dihubungkan.",
     "freeTrial": "Pendaftaran Free Trial masih menggunakan mode demo."
+  }
+},
+"Navbar": {
+  "product": "Produk",
+  "features": "Fitur",
+  "solutions": "Solusi Bisnis",
+  "demo": "Demo",
+  "pricing": "Harga",
+  "signIn": "Masuk",
+  "freeTrial": "Coba Gratis 14 Hari",
+
+  "productMenu": {
+    "overviewLabel": "PRODUK",
+    "overviewTitle": "Nexora ERP",
+    "overviewDescription": "Satu sistem terintegrasi untuk penjualan, stok, laporan, dan operasional multi-cabang.",
+    "overview": "Ringkasan Produk",
+    "allFeatures": "Semua Fitur",
+
+    "coreLabel": "FITUR UTAMA",
+    "pos": "POS & Kasir",
+    "inventory": "Inventory",
+    "analytics": "Analitik & Laporan",
+    "multiBranch": "Multi-Cabang",
+
+    "moreLabel": "LAINNYA",
+    "integrations": "Integrasi",
+    "customSolutions": "Solusi Kustom"
+  },
+
+  "solutionsMenu": {
+    "industryLabel": "BERDASARKAN INDUSTRI",
+    "fnb": "F&B",
+    "retail": "Retail",
+    "services": "Jasa",
+    "multiBranch": "Multi-Cabang",
+
+    "needLabel": "BERDASARKAN KEBUTUHAN",
+    "sales": "Manajemen Penjualan",
+    "inventory": "Kontrol Inventory",
+    "customers": "Manajemen Pelanggan",
+    "analytics": "Analitik Bisnis"
   }
 }
 }

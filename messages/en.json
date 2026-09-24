@@ -8,42 +8,39 @@
     "freeTrial": "Free Trial"
   },
   "Hero": {
-    "badge": "Modern ERP for Indonesian Businesses",
-    "titleLine1": "Manage All Your",
-    "titleLine2": "Business Operations",
-    "titleLine3": "in One Platform",
-    "description": "Nexora ERP helps businesses manage sales, inventory, customers, reporting, and daily operations more easily, efficiently, and in one integrated platform.",
-    "startFreeTrial": "Start Free Trial",
-    "requestDemo": "Request a Demo",
-    "easyToUse": "Easy to use",
-    "noCreditCard": "No credit card required",
-    "localSupport": "Local support",
-    "ownerAlt": "Business owner using Nexora ERP",
-    "quote": "Nexora has helped us manage multiple branches more efficiently.",
-    "quoteAuthor": "Raka, Coffee Shop Owner",
-    "dashboard": {
-      "dashboard": "Dashboard",
-      "sales": "Sales",
-      "products": "Products",
-      "customers": "Customers",
-      "purchases": "Purchases",
-      "finance": "Finance",
-      "reports": "Reports",
-      "totalSales": "Total Sales",
-      "totalSalesValue": "Rp 124.5M",
-      "transactions": "Transactions",
-      "transactionsValue": "1,430",
-      "productStock": "Product Stock",
-      "productStockValue": "892",
-      "runningLow": "12 running low",
-      "customersMetric": "Customers",
-      "customersValue": "1,024",
-      "last30Days": "Sales in the Last 30 Days",
-      "performance": "Business transaction performance",
-      "salesByCategory": "Sales by Category",
-      "services": "Services"
-    }
-  },
+  "badge": "One Product. Complete Business Control.",
+  "titleLine1": "Manage Sales,",
+  "titleLine2": "Inventory & Operations",
+  "titleLine3": "in One Integrated System",
+  "description": "Nexora ERP combines POS, inventory, customers, reporting, and multi-branch operations in one complete product without separate modules.",
+  "startFreeTrial": "Start Free Trial",
+  "requestDemo": "Request a Demo",
+  "easyToUse": "Easy to use",
+  "noCreditCard": "No credit card required",
+  "localSupport": "Local support",
+  "dashboard": {
+    "dashboard": "Dashboard",
+    "sales": "Sales",
+    "products": "Products",
+    "customers": "Customers",
+    "purchases": "Purchases",
+    "finance": "Finance",
+    "reports": "Reports",
+    "totalSales": "Total Sales",
+    "totalSalesValue": "Rp 124.5M",
+    "transactions": "Transactions",
+    "transactionsValue": "1,430",
+    "productStock": "Product Stock",
+    "productStockValue": "892",
+    "runningLow": "12 running low",
+    "customersMetric": "Customers",
+    "customersValue": "1,024",
+    "last30Days": "Sales in the Last 30 Days",
+    "performance": "Business transaction performance",
+    "salesByCategory": "Sales by Category",
+    "services": "Services"
+  }
+},
   "TrustedBy": {
     "trustedText": "Trusted by businesses across Indonesia",
     "learnMore": "Learn more",
@@ -92,106 +89,103 @@
     }
   },
   "Modules": {
-    "eyebrow": "Integrated Ecosystem",
-    "title": "Everything You Need to Manage Your Business",
-    "description": "Nexora ERP modules work together to keep your business operations connected in one simpler and more efficient platform.",
-    "bottomNote": "All modules work together seamlessly within one integrated system.",
-    "items": {
-      "pos": {
-        "title": "POS & Checkout",
-        "description": "Fast and flexible transactions."
-      },
-      "inventory": {
-        "title": "Inventory",
-        "description": "Monitor stock in real time."
-      },
-      "purchasing": {
-        "title": "Purchasing",
-        "description": "Manage suppliers and purchase orders."
-      },
-      "accounting": {
-        "title": "Accounting",
-        "description": "Keep financial reporting more structured."
-      },
-      "crm": {
-        "title": "CRM & Customers",
-        "description": "Manage and understand your customers."
-      },
-      "hr": {
-        "title": "HR & Employees",
-        "description": "Manage team data and activities."
-      },
-      "loyalty": {
-        "title": "Loyalty & Promotions",
-        "description": "Strengthen customer relationships."
-      },
-      "orders": {
-        "title": "Order Management",
-        "description": "Manage orders in one system."
-      },
-      "analytics": {
-        "title": "Analytics & Reports",
-        "description": "Get real-time insights into business performance."
-      },
-      "multiBranch": {
-        "title": "Multi-Branch",
-        "description": "Manage multiple branches more easily."
-      },
-      "custom": {
-        "title": "Custom Solutions",
-        "description": "Adapt the system to your business needs."
-      },
-      "api": {
-        "title": "API Integrations",
-        "description": "Connect Nexora with other systems."
+  "eyebrow": "ONE PRODUCT, COMPLETE SYSTEM",
+  "title": "Everything Your Business Needs, Included in Nexora ERP",
+  "description": "From checkout and inventory to customers, reporting, and multi-branch operations, every core capability works together inside one integrated product.",
+
+  "groups": {
+    "sales": {
+      "title": "Sales & Checkout",
+      "description": "Handle daily transactions and customer-facing operations quickly from one connected system.",
+      "items": {
+        "pos": "POS & Checkout",
+        "orders": "Order Management",
+        "loyalty": "Loyalty & Promotions"
+      }
+    },
+    "inventory": {
+      "title": "Inventory & Supply",
+      "description": "Keep stock, purchasing, and product movement connected with your daily sales activity.",
+      "items": {
+        "inventory": "Inventory Management",
+        "purchasing": "Purchasing",
+        "stock": "Real-time Stock Control"
+      }
+    },
+    "customers": {
+      "title": "Customers & Team",
+      "description": "Manage customer relationships and internal operations without moving between disconnected tools.",
+      "items": {
+        "crm": "CRM & Customers",
+        "hr": "HR & Employees",
+        "customerData": "Customer Management"
+      }
+    },
+    "insights": {
+      "title": "Insights & Business Control",
+      "description": "Turn operational data into clearer reporting and centralized control across your business.",
+      "items": {
+        "analytics": "Analytics & Reports",
+        "accounting": "Accounting",
+        "multiBranch": "Multi-Branch Management"
       }
     }
   },
+
+  "bottomNote": "One Nexora ERP product. Core capabilities work together without separate modules."
+},
   "ProductShowcase": {
-    "badge": {
-      "title": "Faster transactions",
-      "subtitle": "with better customer service"
-    },
-    "eyebrow": "Featured Product",
-    "title": "Modern POS for a Better Transaction Experience",
-    "description": "An intuitive interface that supports multiple payment methods and works seamlessly both online and offline.",
-    "button": "Explore POS Features",
-    "imageAlt": "Business owner using the POS system",
-    "benefits": {
-      "easy": "Easy to use across your entire team",
-      "receipts": "Supports digital and printed receipts",
-      "integration": "Integrated with inventory and reporting"
-    }
+  "eyebrow": "PRODUCT IN ACTION",
+  "title": "From Checkout to Inventory, Everything Stays Connected",
+  "description": "Nexora ERP keeps sales, inventory, and business data connected in one continuous workflow, so your team can work without switching between separate systems.",
+
+  "benefits": {
+    "easy": "Fast and simple checkout for daily transactions",
+    "receipts": "Inventory updates automatically after every sale",
+    "integration": "Sales and operational reports stay synchronized"
   },
+
+  "button": "Explore Nexora ERP",
+
+  "imageAlt": "Nexora ERP point of sale and inventory system",
+
+  "badge": {
+    "title": "One Connected System",
+    "subtitle": "Sales, inventory, and reports"
+  }
+},
   "MultiBranch": {
-    "eyebrow": "Multi-Branch Management",
-    "title": "Manage All Your Branches from One Dashboard",
-    "description": "Manage multiple locations, outlets, warehouses, and teams in one system. Nexora ERP helps you monitor business operations across all branches from a centralized platform.",
-    "button": "Explore Multi-Branch",
-    "benefits": {
-      "reporting": "Branch-level and consolidated reporting",
-      "transfer": "Stock transfers between branches",
-      "monitoring": "Real-time performance monitoring",
-      "access": "User and access control management"
-    },
-    "dashboard": {
-      "title": "Branch Performance",
-      "subtitle": "Performance summary across all locations",
-      "period": "This Month",
-      "totalBranches": "Total Branches",
-      "totalSales": "Total Sales",
-      "activeBranches": "Active Branches",
-      "branch": "Branch",
-      "sales": "Sales",
-      "transactions": "Transactions",
-      "growth": "Growth",
-      "status": "Status",
-      "active": "Active",
-      "updated": "Data updated in real time",
-      "viewReport": "View full report",
-      "totalSalesValue": "Rp 402M"
-    }
+  "eyebrow": "BUILT FOR MULTI-BRANCH OPERATIONS",
+  "title": "Control Every Branch from One Centralized View",
+  "description": "Multi-branch management is built directly into Nexora ERP, giving owners one place to monitor sales, stock movement, branch performance, and team access.",
+
+  "benefits": {
+    "reporting": "Branch-level and consolidated business reporting",
+    "transfer": "Stock transfers between outlets and locations",
+    "monitoring": "Real-time performance monitoring across branches",
+    "access": "Centralized user roles and access control"
   },
+
+  "button": "Explore Multi-Branch",
+
+  "dashboard": {
+    "title": "Branch Performance",
+    "subtitle": "Centralized overview across all locations",
+    "period": "This Month",
+    "totalBranches": "Total Branches",
+    "totalSales": "Total Sales",
+    "totalSalesValue": "Rp 402M",
+    "activeBranches": "Active Branches",
+    "branch": "Branch",
+    "sales": "Sales",
+    "transactions": "Transactions",
+    "growth": "Growth",
+    "status": "Status",
+    "active": "Active",
+    "updated": "Data updated in real time",
+    "viewReport": "View full report"
+  }
+},
   "Pricing": {
     "eyebrow": "Pricing",
     "title": "Plans Built to Grow With Your Business",
@@ -393,6 +387,47 @@
     "socialDemo": "{provider} Sign In is still running in demo mode.",
     "forgotPassword": "The forgot password feature is not connected yet.",
     "freeTrial": "Free Trial registration is still running in demo mode."
+  }
+},
+"Navbar": {
+  "product": "Product",
+  "features": "Features",
+  "solutions": "Solutions",
+  "demo": "Demo",
+  "pricing": "Pricing",
+  "signIn": "Sign In",
+  "freeTrial": "Start Free Trial",
+
+  "productMenu": {
+    "overviewLabel": "PRODUCT",
+    "overviewTitle": "Nexora ERP",
+    "overviewDescription": "One integrated system for sales, inventory, reporting, and multi-branch operations.",
+    "overview": "Product Overview",
+    "allFeatures": "All Features",
+
+    "coreLabel": "CORE FEATURES",
+    "pos": "POS & Checkout",
+    "inventory": "Inventory",
+    "analytics": "Analytics & Reports",
+    "multiBranch": "Multi-Branch",
+
+    "moreLabel": "MORE",
+    "integrations": "Integrations",
+    "customSolutions": "Custom Solutions"
+  },
+
+  "solutionsMenu": {
+    "industryLabel": "BY INDUSTRY",
+    "fnb": "F&B",
+    "retail": "Retail",
+    "services": "Services",
+    "multiBranch": "Multi-Branch",
+
+    "needLabel": "BY BUSINESS NEED",
+    "sales": "Sales Management",
+    "inventory": "Inventory Control",
+    "customers": "Customer Management",
+    "analytics": "Business Analytics"
   }
 }
 }

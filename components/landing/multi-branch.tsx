@@ -55,27 +55,23 @@ export function MultiBranch() {
   return (
     <section
       id="multi-branch"
-      className="relative overflow-hidden bg-[#F5FAFF] py-24"
+      className="relative overflow-hidden bg-neutral-50 py-24"
     >
       {/* Background accent */}
-      <div className="absolute -left-32 top-20 size-[360px] rounded-full bg-sky-200/20 blur-3xl" />
-      <div className="absolute -right-32 bottom-0 size-[360px] rounded-full bg-cyan-100/30 blur-3xl" />
+      <div className="absolute -left-32 top-20 size-[360px] rounded-full bg-neutral-200/40 blur-3xl" />
+      <div className="absolute -right-32 bottom-0 size-[360px] rounded-full bg-neutral-200/30 blur-3xl" />
 
       <div className="relative mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:px-8">
         {/* LEFT CONTENT */}
         <div>
-  <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-100 bg-white px-3.5 py-1.5 text-xs font-semibold text-[#1597E5] shadow-sm">
-    <span className="size-2 rounded-full bg-[#1597E5]" />
+  <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-semibold text-slate-600 shadow-sm">
+    <span className="size-2 rounded-full bg-slate-500" />
     {t("eyebrow")}
   </div>
 
   <h2 className="max-w-xl text-4xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-5xl">
     {t("title")}
   </h2>
-
-          <h2 className="mt-4 max-w-xl text-4xl font-semibold tracking-[-0.035em] text-slate-950 sm:text-5xl">
-            {t("title")}
-          </h2>
 
           <p className="mt-5 max-w-lg text-base leading-7 text-slate-600">
             {t("description")}
@@ -84,7 +80,7 @@ export function MultiBranch() {
           <div className="mt-8 space-y-4">
             {benefits.map((item) => (
               <div key={item} className="flex items-center gap-3">
-                <div className="flex size-6 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                <div className="flex size-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-700">
                   <Check size={14} strokeWidth={3} />
                 </div>
 
@@ -93,7 +89,7 @@ export function MultiBranch() {
             ))}
           </div>
 
-          <button className="mt-8 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-sky-200 hover:text-[#1597E5] hover:shadow-md">
+          <button className="mt-8 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:text-slate-950 hover:shadow-md">
             {t("button")}
             <ArrowUpRight size={16} />
           </button>
@@ -101,13 +97,13 @@ export function MultiBranch() {
 
         {/* RIGHT DASHBOARD */}
         <div className="relative">
-          <div className="absolute -inset-6 rounded-[40px] bg-gradient-to-br from-sky-100/60 via-white to-cyan-100/40 blur-2xl" />
+          <div className="absolute -inset-6 rounded-[40px] bg-gradient-to-br from-neutral-100 via-white to-neutral-200/60 blur-2xl" />
 
           <div className="relative overflow-hidden rounded-[28px] border border-slate-200/80 bg-white shadow-[0_25px_70px_rgba(15,23,42,0.10)]">
             {/* Header */}
             <div className="flex flex-col gap-4 border-b border-slate-100 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-3">
-                <div className="flex size-10 items-center justify-center rounded-xl bg-sky-50 text-[#1597E5]">
+                <div className="flex size-10 items-center justify-center rounded-xl bg-neutral-100 text-slate-700">
                   <Building2 size={19} />
                 </div>
 
@@ -193,13 +189,13 @@ export function MultiBranch() {
                         {branch.transactions}
                       </td>
 
-                      <td className="py-4 font-medium text-emerald-600">
+                      <td className="py-4 font-medium text-slate-600">
                         {branch.growth}
                       </td>
 
                       <td className="py-4">
-                        <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700">
-                          <span className="size-1.5 rounded-full bg-emerald-500" />
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">
+                          <span className="size-1.5 rounded-full bg-slate-500" />
                           {t("dashboard.active")}
                         </span>
                       </td>
@@ -215,7 +211,7 @@ export function MultiBranch() {
                 {t("dashboard.updated")}
               </p>
 
-              <button className="text-xs font-medium text-[#1597E5]">
+              <button className="text-xs font-medium text-slate-700 transition-colors hover:text-slate-950">
                 {t("dashboard.viewReport")} →
               </button>
             </div>
@@ -237,7 +233,7 @@ function SummaryCard({
 }) {
   return (
     <div className="rounded-2xl border border-slate-100 bg-slate-50/60 p-4">
-      <div className="mb-3 flex size-8 items-center justify-center rounded-lg bg-white text-[#1597E5] shadow-sm">
+      <div className="mb-3 flex size-8 items-center justify-center rounded-lg bg-white text-slate-700 shadow-sm">
         {icon}
       </div>
 

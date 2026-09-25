@@ -36,7 +36,7 @@ export function TrustedBy() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#1597E5]">
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
             {t("eyebrow")}
           </p>
 
@@ -59,7 +59,7 @@ export function TrustedBy() {
                 key={item.key}
                 className="rounded-[24px] border border-slate-200/80 bg-white p-6 shadow-sm"
               >
-                <div className="flex size-11 items-center justify-center rounded-2xl bg-sky-50 text-[#1597E5]">
+                <div className="flex size-11 items-center justify-center rounded-2xl bg-neutral-100 text-slate-700">
                   <Icon size={20} />
                 </div>
 

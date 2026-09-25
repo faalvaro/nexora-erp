@@ -75,12 +75,12 @@ export function Pricing() {
       className="scroll-mt-20 relative overflow-hidden bg-white py-24"
     >
       {/* Background */}
-      <div className="absolute left-1/2 top-0 h-[360px] w-[760px] -translate-x-1/2 rounded-full bg-sky-100/40 blur-3xl" />
+      <div className="absolute left-1/2 top-0 h-[360px] w-[760px] -translate-x-1/2 rounded-full bg-neutral-200/40 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#1597E5]">
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
             {t("eyebrow")}
           </p>
 
@@ -129,14 +129,14 @@ export function Pricing() {
               key={plan.key}
               className={`relative flex h-full flex-col rounded-[28px] border bg-white p-7 transition-all duration-300 sm:p-8 ${
                 plan.featured
-                  ? "border-[#1597E5] shadow-[0_24px_65px_rgba(21,151,229,0.12)]"
+                  ? "border-slate-900 shadow-[0_24px_65px_rgba(15,23,42,0.10)]"
                   : "border-slate-200 shadow-sm hover:-translate-y-1 hover:shadow-lg"
               }`}
             >
               {/* Popular */}
               {plan.featured && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="flex items-center gap-2 rounded-full bg-[#1597E5] px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-sky-500/20">
+                  <div className="flex items-center gap-2 rounded-full bg-slate-950 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-slate-300/40">
                     <Sparkles size={13} />
                     {t("mostPopular")}
                   </div>
@@ -188,7 +188,7 @@ export function Pricing() {
                     key={featureKey}
                     className="flex items-start gap-3"
                   >
-                    <div className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                    <div className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-700">
                       <Check size={12} strokeWidth={3} />
                     </div>
 
@@ -206,8 +206,8 @@ export function Pricing() {
                 type="button"
                 className={`mt-8 w-full rounded-full px-5 py-3.5 text-sm font-semibold transition-all duration-200 lg:mt-auto ${
                   plan.featured
-                    ? "bg-[#1597E5] text-white shadow-lg shadow-sky-500/20 hover:bg-[#0F86CC]"
-                    : "border border-slate-200 bg-white text-slate-800 hover:border-sky-200 hover:text-[#1597E5]"
+                    ? "bg-slate-950 text-white shadow-lg shadow-slate-300/40 hover:bg-slate-800"
+                    : "border border-slate-200 bg-white text-slate-800 hover:border-slate-300 hover:text-slate-950"
                 }`}
               >
                 {t(`plans.${plan.key}.button`)}

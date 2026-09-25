@@ -49,7 +49,7 @@ export function Navbar() {
           href="/"
           className="flex shrink-0 items-center gap-2.5 justify-self-start font-semibold tracking-tight text-slate-950"
         >
-          <div className="flex size-8 items-center justify-center rounded-lg bg-[#1597E5] text-xs font-bold text-white">
+          <div className="flex size-8 items-center justify-center rounded-lg bg-slate-950 text-xs font-bold text-white">
             N
           </div>
 
@@ -176,7 +176,7 @@ export function Navbar() {
 
           <Link
             href="#pricing"
-            className="rounded-full bg-[#1597E5] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#0F86CC]"
+            className="rounded-full bg-slate-950 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
           >
             {t("freeTrial")}
           </Link>
@@ -481,7 +481,7 @@ export function Navbar() {
               <Link
                 href="#pricing"
                 onClick={closeMobile}
-                className="mt-2 rounded-full bg-[#1597E5] px-5 py-3 text-center text-sm font-semibold text-white"
+                className="mt-2 rounded-full bg-slate-950 px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-slate-800"
               >
                 {t("freeTrial")}
               </Link>
@@ -687,7 +687,7 @@ function MegaItem({
   return (
     <Link
       href={href}
-      className="rounded-xl px-3 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-[#1597E5]"
+      className="rounded-xl px-3 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-950"
     >
       {title}
     </Link>
@@ -704,7 +704,7 @@ function MegaLink({
   return (
     <Link
       href={href}
-      className="text-sm font-medium text-[#1597E5] hover:text-[#0F86CC]"
+      className="text-sm font-medium text-slate-950 transition-colors hover:text-slate-600"
     >
       {children} →
     </Link>

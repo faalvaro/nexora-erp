@@ -23,7 +23,7 @@ export function Modules() {
         t("groups.sales.items.orders"),
         t("groups.sales.items.loyalty"),
       ],
-      iconClass: "bg-sky-50 text-[#1597E5]",
+      iconClass: "bg-neutral-100 text-slate-700",
     },
     {
       key: "inventory",
@@ -35,7 +35,7 @@ export function Modules() {
         t("groups.inventory.items.purchasing"),
         t("groups.inventory.items.stock"),
       ],
-      iconClass: "bg-emerald-50 text-emerald-600",
+      iconClass: "bg-neutral-100 text-slate-700",
     },
     {
       key: "customers",
@@ -47,7 +47,7 @@ export function Modules() {
         t("groups.customers.items.hr"),
         t("groups.customers.items.customerData"),
       ],
-      iconClass: "bg-violet-50 text-violet-600",
+      iconClass: "bg-neutral-100 text-slate-700",
     },
     {
       key: "insights",
@@ -59,23 +59,23 @@ export function Modules() {
         t("groups.insights.items.accounting"),
         t("groups.insights.items.multiBranch"),
       ],
-      iconClass: "bg-amber-50 text-amber-600",
+      iconClass: "bg-neutral-100 text-slate-700",
     },
   ];
 
   return (
     <section
       id="features"
-      className="relative overflow-hidden bg-[#F7FAFF] py-24"
+      className="relative overflow-hidden bg-neutral-50 py-24"
     >
       {/* Background accents */}
-      <div className="absolute -left-40 top-10 size-[400px] rounded-full bg-sky-100/50 blur-3xl" />
-      <div className="absolute -right-40 bottom-0 size-[400px] rounded-full bg-blue-100/40 blur-3xl" />
+      <div className="absolute -left-40 top-10 size-[400px] rounded-full bg-neutral-200/40 blur-3xl" />
+      <div className="absolute -right-40 bottom-0 size-[400px] rounded-full bg-neutral-200/30 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#1597E5]">
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
             {t("eyebrow")}
           </p>
 
@@ -96,7 +96,7 @@ export function Modules() {
             return (
               <article
                 key={group.key}
-                className="group rounded-[28px] border border-slate-200/80 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-200 hover:shadow-xl hover:shadow-slate-200/40 sm:p-8"
+                className="group rounded-[28px] border border-slate-200/80 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl hover:shadow-slate-200/40 sm:p-8"
               >
                 <div className="flex items-start gap-5">
                   <div
@@ -122,7 +122,7 @@ export function Modules() {
                       key={item}
                       className="flex items-start gap-2.5"
                     >
-                      <div className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                      <div className="inline-flex items-center gap-2 rounded-full border border-sky-100 bg-white px-5 py-2.5 text-sm text-slate-500 shadow-sm">
                         <Check size={12} strokeWidth={3} />
                       </div>
 
@@ -139,8 +139,8 @@ export function Modules() {
 
         {/* Bottom message */}
         <div className="mt-10 flex justify-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-sky-100 bg-white px-5 py-2.5 text-sm text-slate-500 shadow-sm">
-            <span className="size-2 rounded-full bg-[#1597E5]" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm text-slate-500 shadow-sm">
+            <span className="size-2 rounded-full bg-slate-500" />
             {t("bottomNote")}
           </div>
         </div>

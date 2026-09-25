@@ -47,7 +47,7 @@ export function FAQ() {
       <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:px-8">
         {/* LEFT */}
         <div className="lg:sticky lg:top-28">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#1597E5]">
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
             {t("eyebrow")}
           </p>
 

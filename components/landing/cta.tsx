@@ -10,7 +10,7 @@ export function CTA() {
   return (
     <section className="bg-white px-6 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-r from-[#1597E5] via-[#18B5D8] to-[#20C5C7] px-8 py-12 shadow-[0_25px_70px_rgba(21,151,229,0.20)] sm:px-12 lg:px-16">
+        <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-r from-slate-950 via-slate-900 to-slate-800 px-8 py-12 shadow-[0_25px_70px_rgba(15,23,42,0.18)] sm:px-12 lg:px-16">
           {/* Decorative blur */}
           <div className="absolute -left-20 -top-20 size-72 rounded-full bg-white/10 blur-3xl" />
           <div className="absolute -bottom-24 right-10 size-80 rounded-full bg-white/10 blur-3xl" />

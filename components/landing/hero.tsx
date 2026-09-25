@@ -34,9 +34,9 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-white pb-24 pt-32">
       {/* Background */}
-      <div className="absolute inset-x-0 top-0 h-[620px] bg-gradient-to-b from-sky-50/80 via-white to-white" />
+      <div className="absolute inset-x-0 top-0 h-[620px] bg-gradient-to-b from-neutral-100/80 via-white to-white" />
 
-      <div className="absolute left-1/2 top-24 h-[380px] w-[760px] -translate-x-1/2 rounded-full bg-sky-100/60 blur-3xl" />
+      <div className="absolute left-1/2 top-24 h-[380px] w-[760px] -translate-x-1/2 rounded-full bg-neutral-200/50 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* HERO COPY */}
@@ -46,8 +46,8 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-4xl text-center"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-medium text-sky-700 shadow-sm">
-            <span className="size-2 rounded-full bg-emerald-500" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 shadow-sm">
+            <span className="size-2 rounded-full bg-slate-500" />
             {t("badge")}
           </div>
 
@@ -55,7 +55,7 @@ export function Hero() {
             {t("titleLine1")}
             <br />
 
-            <span className="text-[#1597E5]">
+            <span className="text-slate-500">
               {t("titleLine2")}
             </span>
 
@@ -72,7 +72,7 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               href="#pricing"
-              className="inline-flex h-12 items-center gap-2 rounded-full bg-[#1597E5] px-6 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition-all hover:-translate-y-0.5 hover:bg-[#0F86CC]"
+              className="inline-flex h-12 items-center gap-2 rounded-full bg-slate-950 px-6 text-sm font-semibold text-white shadow-lg shadow-slate-300/40 transition-all hover:-translate-y-0.5 hover:bg-slate-800"
             >
               {t("startFreeTrial")}
               <ArrowRight size={16} />
@@ -93,7 +93,7 @@ export function Hero() {
                 key={item}
                 className="flex items-center gap-2 text-sm text-slate-500"
               >
-                <div className="flex size-5 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                <div className="flex size-5 items-center justify-center rounded-full bg-slate-100 text-slate-700">
                   <Check size={12} strokeWidth={3} />
                 </div>
 
@@ -114,13 +114,13 @@ export function Hero() {
           className="relative mx-auto mt-16 max-w-6xl"
         >
           {/* Glow */}
-          <div className="absolute -inset-8 -z-10 rounded-[48px] bg-gradient-to-r from-sky-100/80 via-blue-50 to-cyan-100/70 blur-3xl" />
+          <div className="absolute -inset-8 -z-10 rounded-[48px] bg-gradient-to-r from-slate-100 via-slate-50 to-slate-200/70 blur-3xl" />
 
           <div className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_30px_90px_rgba(15,23,42,0.14)]">
             {/* Product Topbar */}
             <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4 sm:px-6">
               <div className="flex items-center gap-3">
-                <div className="flex size-8 items-center justify-center rounded-lg bg-[#1597E5] text-xs font-bold text-white">
+                <div className="flex size-8 items-center justify-center rounded-lg bg-slate-950 text-xs font-bold text-white">
                   N
                 </div>
 
@@ -150,7 +150,7 @@ export function Hero() {
                     key={item}
                     className={`mb-1 rounded-lg px-3 py-2.5 text-xs ${
                       index === 0
-                        ? "bg-sky-50 font-semibold text-sky-700"
+                        ? "bg-slate-200 font-semibold text-slate-950"
                         : "text-slate-500"
                     }`}
                   >
@@ -211,7 +211,7 @@ export function Hero() {
                       ].map((height, index) => (
                         <div
                           key={index}
-                          className="flex-1 rounded-t-md bg-gradient-to-t from-[#1597E5] to-cyan-300"
+                          className="flex-1 rounded-t-md bg-gradient-to-t from-slate-900 to-slate-400"
                           style={{
                             height: `${height}%`,
                           }}
@@ -225,25 +225,25 @@ export function Hero() {
                       {t("dashboard.salesByCategory")}
                     </p>
 
-                    <div className="mx-auto my-7 flex size-32 items-center justify-center rounded-full bg-[conic-gradient(#1597E5_0_40%,#22c55e_40%_67%,#f59e0b_67%_84%,#e2e8f0_84%_100%)]">
+                    <div className="mx-auto my-7 flex size-32 items-center justify-center rounded-full bg-[conic-gradient(#0f172a_0_40%,#475569_40%_67%,#94a3b8_67%_84%,#e2e8f0_84%_100%)]">
                       <div className="size-20 rounded-full bg-white" />
                     </div>
 
                     <div className="space-y-2.5 text-xs text-slate-500">
                       <Legend
-                        dot="bg-[#1597E5]"
+                        dot="bg-slate-900"
                         label="F&B"
                         value="40%"
                       />
 
                       <Legend
-                        dot="bg-green-500"
+                        dot="bg-slate-600"
                         label="Retail"
                         value="27%"
                       />
 
                       <Legend
-                        dot="bg-amber-500"
+                        dot="bg-slate-400"
                         label={t("dashboard.services")}
                         value="17%"
                       />
@@ -272,7 +272,7 @@ function MetricCard({
 }) {
   return (
     <div className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
-      <div className="mb-3 flex size-8 items-center justify-center rounded-lg bg-sky-50 text-[#1597E5]">
+      <div className="mb-3 flex size-8 items-center justify-center rounded-lg bg-slate-100 text-slate-700">
         {icon}
       </div>
 
@@ -284,7 +284,7 @@ function MetricCard({
         {value}
       </p>
 
-      <p className="mt-1 text-xs font-medium text-emerald-600">
+      <p className="mt-1 text-xs font-medium text-slate-500">
         {text}
       </p>
     </div>

@@ -43,7 +43,7 @@ export function Navbar() {
       className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/95 backdrop-blur-xl"
     >
       {/* MAIN NAVBAR */}
-      <div className="mx-auto grid h-16 max-w-7xl grid-cols-[1fr_auto] items-center px-6 lg:grid-cols-[1fr_auto_1fr] lg:px-8">
+      <div className="mx-auto grid h-16 max-w-7xl grid-cols-[1fr_auto] items-center px-4 sm:px-6 lg:grid-cols-[1fr_auto_1fr] lg:px-8">
         {/* Logo */}
         <Link
           href="/"
@@ -240,7 +240,7 @@ export function Navbar() {
             transition={{ duration: 0.2 }}
             className="overflow-hidden border-t border-slate-200 bg-white lg:hidden"
           >
-            <div className="mx-auto flex max-w-7xl flex-col px-6 py-4">
+            <div className="mx-auto flex max-h-[calc(100dvh-4rem)] max-w-7xl flex-col overflow-y-auto overscroll-contain px-4 py-4 sm:px-6">
               {/* PRODUCT MOBILE */}
               <button
                 type="button"
@@ -331,7 +331,7 @@ export function Navbar() {
               </AnimatePresence>
 
               <Link
-                href="#custom"
+                href="#features"
                 onClick={closeMobile}
                 className="rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100"
               >

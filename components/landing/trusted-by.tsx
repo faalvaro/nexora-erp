@@ -32,15 +32,15 @@ export function TrustedBy() {
   ];
 
   return (
-    <section className="border-y border-slate-100 bg-white py-20">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="border-y border-slate-100 bg-white py-16 sm:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
             {t("eyebrow")}
           </p>
 
-          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-4xl">
+          <h2 className="mt-4 text-[30px] font-semibold leading-tight tracking-[-0.04em] text-slate-950 sm:text-4xl">
             {t("title")}
           </h2>
 
@@ -50,14 +50,14 @@ export function TrustedBy() {
         </div>
 
         {/* Items */}
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:mt-12 md:grid-cols-3 md:gap-5">
           {items.map((item) => {
             const Icon = item.icon;
 
             return (
               <div
                 key={item.key}
-                className="rounded-[24px] border border-slate-200/80 bg-white p-6 shadow-sm"
+                className="rounded-[24px] border border-slate-200/80 bg-white p-5 shadow-sm sm:p-6"
               >
                 <div className="flex size-11 items-center justify-center rounded-2xl bg-neutral-100 text-slate-700">
                   <Icon size={20} />

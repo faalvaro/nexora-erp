@@ -66,20 +66,20 @@ export function Modules() {
   return (
     <section
       id="features"
-      className="relative overflow-hidden bg-neutral-50 py-24"
+      className="relative overflow-hidden bg-neutral-50 py-16 sm:py-20 lg:py-24"
     >
       {/* Background accents */}
       <div className="absolute -left-40 top-10 size-[400px] rounded-full bg-neutral-200/40 blur-3xl" />
       <div className="absolute -right-40 bottom-0 size-[400px] rounded-full bg-neutral-200/30 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
             {t("eyebrow")}
           </p>
 
-          <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-5xl">
+          <h2 className="mt-4 text-[34px] font-semibold leading-[1.08] tracking-[-0.04em] text-slate-950 sm:text-5xl">
             {t("title")}
           </h2>
 
@@ -89,16 +89,16 @@ export function Modules() {
         </div>
 
         {/* Capability Groups */}
-        <div className="mt-14 grid gap-5 lg:grid-cols-2">
+        <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 lg:mt-14 lg:grid-cols-2">
           {groups.map((group) => {
             const Icon = group.icon;
 
             return (
               <article
                 key={group.key}
-                className="group rounded-[28px] border border-slate-200/80 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl hover:shadow-slate-200/40 sm:p-8"
+                className="group rounded-[28px] border border-slate-200/80 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl hover:shadow-slate-200/40 sm:p-7 lg:p-8"
               >
-                <div className="flex items-start gap-5">
+                <div className="flex items-start gap-4 sm:gap-5">
                   <div
                     className={`flex size-12 shrink-0 items-center justify-center rounded-2xl ${group.iconClass}`}
                   >
@@ -116,13 +116,13 @@ export function Modules() {
                   </div>
                 </div>
 
-                <div className="mt-7 grid gap-3 border-t border-slate-100 pt-6 sm:grid-cols-3">
+                <div className="mt-6 grid gap-3 border-t border-slate-100 pt-5 sm:mt-7 sm:grid-cols-2 sm:pt-6 xl:grid-cols-3">
                   {group.items.map((item) => (
                     <div
                       key={item}
                       className="flex items-start gap-2.5"
                     >
-                      <div className="inline-flex items-center gap-2 rounded-full border border-sky-100 bg-white px-5 py-2.5 text-sm text-slate-500 shadow-sm">
+                      <div className="flex size-5 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-700">
                         <Check size={12} strokeWidth={3} />
                       </div>
 
@@ -135,14 +135,6 @@ export function Modules() {
               </article>
             );
           })}
-        </div>
-
-        {/* Bottom message */}
-        <div className="mt-10 flex justify-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm text-slate-500 shadow-sm">
-            <span className="size-2 rounded-full bg-slate-500" />
-            {t("bottomNote")}
-          </div>
         </div>
       </div>
     </section>

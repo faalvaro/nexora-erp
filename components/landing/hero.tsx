@@ -160,6 +160,7 @@ export function Hero() {
                 <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
                   <MetricCard
                     icon={<BarChart3 size={16} />}
+                    iconClass="bg-emerald-50 text-emerald-600"
                     title={t("dashboard.totalSales")}
                     value={t("dashboard.totalSalesValue")}
                     text="+12%"
@@ -167,6 +168,7 @@ export function Hero() {
 
                   <MetricCard
                     icon={<ShoppingCart size={16} />}
+                    iconClass="bg-indigo-50 text-indigo-600"
                     title={t("dashboard.transactions")}
                     value={t("dashboard.transactionsValue")}
                     text="+8%"
@@ -174,6 +176,7 @@ export function Hero() {
 
                   <MetricCard
                     icon={<Package size={16} />}
+                    iconClass="bg-amber-50 text-amber-600"
                     title={t("dashboard.productStock")}
                     value={t("dashboard.productStockValue")}
                     text={t("dashboard.runningLow")}
@@ -181,6 +184,7 @@ export function Hero() {
 
                   <MetricCard
                     icon={<Users size={16} />}
+                    iconClass="bg-violet-50 text-violet-600"
                     title={t("dashboard.customersMetric")}
                     value={t("dashboard.customersValue")}
                     text="+18%"
@@ -258,18 +262,22 @@ export function Hero() {
 
 function MetricCard({
   icon,
+  iconClass,
   title,
   value,
   text,
 }: {
   icon: React.ReactNode;
+  iconClass: string;
   title: string;
   value: string;
   text: string;
 }) {
   return (
     <div className="min-w-0 rounded-2xl border border-slate-100 bg-white p-3 shadow-sm sm:p-4">
-      <div className="mb-3 flex size-8 items-center justify-center rounded-lg bg-slate-100 text-slate-700">
+      <div
+        className={`mb-3 flex size-8 items-center justify-center rounded-lg ${iconClass}`}
+      >
         {icon}
       </div>
 

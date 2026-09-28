@@ -23,7 +23,7 @@ export function Modules() {
         t("groups.sales.items.orders"),
         t("groups.sales.items.loyalty"),
       ],
-      iconClass: "bg-neutral-100 text-slate-700",
+      iconClass: "bg-emerald-50 text-emerald-600",
     },
     {
       key: "inventory",
@@ -35,7 +35,7 @@ export function Modules() {
         t("groups.inventory.items.purchasing"),
         t("groups.inventory.items.stock"),
       ],
-      iconClass: "bg-neutral-100 text-slate-700",
+      iconClass: "bg-amber-50 text-amber-600",
     },
     {
       key: "customers",
@@ -47,7 +47,7 @@ export function Modules() {
         t("groups.customers.items.hr"),
         t("groups.customers.items.customerData"),
       ],
-      iconClass: "bg-neutral-100 text-slate-700",
+      iconClass: "bg-violet-50 text-violet-600",
     },
     {
       key: "insights",
@@ -59,7 +59,7 @@ export function Modules() {
         t("groups.insights.items.accounting"),
         t("groups.insights.items.multiBranch"),
       ],
-      iconClass: "bg-neutral-100 text-slate-700",
+      iconClass: "bg-indigo-50 text-indigo-600",
     },
   ];
 
@@ -105,7 +105,7 @@ export function Modules() {
                     <Icon size={21} />
                   </div>
 
-                  <div>
+                  <div className="min-w-0">
                     <h3 className="text-xl font-semibold tracking-tight text-slate-950">
                       {group.title}
                     </h3>
@@ -122,7 +122,7 @@ export function Modules() {
                       key={item}
                       className="flex items-start gap-2.5"
                     >
-                      <div className="flex size-5 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-700">
+                      <div className="flex size-5 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
                         <Check size={12} strokeWidth={3} />
                       </div>
 

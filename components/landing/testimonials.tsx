@@ -32,14 +32,15 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="bg-neutral-50 py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="bg-neutral-50 py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
             {t("eyebrow")}
           </p>
 
-          <h2 className="mt-4 text-4xl font-semibold tracking-[-0.035em] text-slate-950 sm:text-5xl">
+          <h2 className="mt-4 text-[34px] font-semibold leading-[1.08] tracking-[-0.035em] text-slate-950 sm:text-5xl">
             {t("title")}
           </h2>
 
@@ -48,12 +49,18 @@ export function Testimonials() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {testimonials.map((item) => (
+        {/* Testimonials */}
+        <div className="mt-10 grid gap-5 sm:mt-12 md:grid-cols-2 lg:mt-14 lg:grid-cols-3 lg:gap-6">
+          {testimonials.map((item, index) => (
             <article
               key={item.key}
-              className="flex h-full flex-col rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className={`flex h-full min-w-0 flex-col rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:rounded-[28px] sm:p-7 ${
+                index === 2
+                  ? "md:col-span-2 lg:col-span-1"
+                  : ""
+              }`}
             >
+              {/* Rating */}
               <div className="flex items-center gap-1 text-amber-400">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star
@@ -64,26 +71,29 @@ export function Testimonials() {
                 ))}
               </div>
 
-              <p className="mt-5 min-h-[112px] text-sm leading-7 text-slate-600">
+              {/* Quote */}
+              <p className="mt-5 text-sm leading-7 text-slate-600 lg:min-h-[112px]">
                 “{item.quote}”
               </p>
 
-              <div className="mt-auto flex items-center gap-4 pt-6">
-                <div className="relative h-14 w-14 overflow-hidden rounded-full">
+              {/* Profile */}
+              <div className="mt-auto flex min-w-0 items-center gap-4 pt-6">
+                <div className="relative size-12 shrink-0 overflow-hidden rounded-full sm:size-14">
                   <Image
                     src={item.image}
                     alt={item.name}
                     fill
                     className="object-cover"
+                    sizes="56px"
                   />
                 </div>
 
-                <div>
-                  <p className="font-semibold text-slate-950">
+                <div className="min-w-0">
+                  <p className="font-semibold leading-5 text-slate-950">
                     {item.name}
                   </p>
 
-                  <p className="text-sm text-slate-500">
+                  <p className="mt-1 text-sm leading-5 text-slate-500">
                     {item.role}
                   </p>
                 </div>

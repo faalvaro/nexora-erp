@@ -211,7 +211,7 @@ export function Hero() {
                       ].map((height, index) => (
                         <div
                           key={index}
-                          className="flex-1 rounded-t-md bg-gradient-to-t from-slate-900 to-slate-400"
+                          className="flex-1 rounded-t-md bg-gradient-to-t from-indigo-700 to-indigo-300"
                           style={{
                             height: `${height}%`,
                           }}
@@ -226,7 +226,7 @@ export function Hero() {
                       {t("dashboard.salesByCategory")}
                     </p>
 
-                    <div className="mx-auto my-7 flex size-28 items-center justify-center rounded-full bg-[conic-gradient(#0f172a_0_40%,#475569_40%_67%,#94a3b8_67%_84%,#e2e8f0_84%_100%)] sm:size-32">
+                    <div className="mx-auto my-7 flex size-28 items-center justify-center rounded-full bg-[conic-gradient(#f59e0b_0_40%,#8b5cf6_40%_67%,#10b981_67%_84%,#cbd5e1_84%_100%)] sm:size-32">
                       <div className="size-16 rounded-full bg-white sm:size-20" />
                     </div>
 

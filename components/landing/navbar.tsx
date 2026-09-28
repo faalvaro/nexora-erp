@@ -43,11 +43,11 @@ export function Navbar() {
       className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/95 backdrop-blur-xl"
     >
       {/* MAIN NAVBAR */}
-      <div className="mx-auto grid h-16 max-w-7xl grid-cols-[1fr_auto] items-center px-4 sm:px-6 lg:grid-cols-[1fr_auto_1fr] lg:px-8">
+      <div className="mx-auto grid h-16 max-w-7xl grid-cols-[1fr_auto] items-center px-4 sm:px-6 lg:px-8 xl:grid-cols-[1fr_auto_1fr]">
         {/* Logo */}
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-2.5 justify-self-start font-semibold tracking-tight text-slate-950"
+          className="flex shrink-0 items-center gap-2.5 justify-self-start whitespace-nowrap font-semibold tracking-tight text-slate-950"
         >
           <div className="flex size-8 items-center justify-center rounded-lg bg-slate-950 text-xs font-bold text-white">
             N
@@ -59,7 +59,7 @@ export function Navbar() {
         </Link>
 
         {/* DESKTOP NAV */}
-        <nav className="hidden items-center gap-1 justify-self-center lg:flex">
+        <nav className="hidden items-center gap-1 justify-self-center xl:flex">
           {/* Product */}
           <button
             type="button"
@@ -140,7 +140,7 @@ export function Navbar() {
         </nav>
 
         {/* DESKTOP ACTIONS */}
-        <div className="hidden items-center gap-2 justify-self-end lg:flex">
+        <div className="hidden items-center gap-2 justify-self-end xl:flex">
           <div className="flex items-center rounded-lg bg-slate-100 p-1">
             <button
               type="button"
@@ -188,7 +188,7 @@ export function Navbar() {
           onClick={() =>
             setMobileOpen((current) => !current)
           }
-          className="flex size-10 items-center justify-center rounded-lg text-slate-800 transition-colors hover:bg-slate-100 lg:hidden"
+          className="flex size-10 items-center justify-center rounded-lg text-slate-800 transition-colors hover:bg-slate-100 xl:hidden"
           aria-label="Toggle navigation"
         >
           {mobileOpen ? (
@@ -208,7 +208,7 @@ export function Navbar() {
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.18 }}
             onMouseEnter={() => setActiveMenu(activeMenu)}
-            className="absolute inset-x-0 top-full hidden border-b border-slate-200 bg-white shadow-[0_18px_40px_rgba(15,23,42,0.08)] lg:block"
+            className="absolute inset-x-0 top-full hidden border-b border-slate-200 bg-white shadow-[0_18px_40px_rgba(15,23,42,0.08)] xl:block"
           >
             {activeMenu === "product" && (
               <ProductMegaMenu t={t} />
@@ -238,7 +238,7 @@ export function Navbar() {
               height: 0,
             }}
             transition={{ duration: 0.2 }}
-            className="overflow-hidden border-t border-slate-200 bg-white lg:hidden"
+            className="overflow-hidden border-t border-slate-200 bg-white xl:hidden"
           >
             <div className="mx-auto flex max-h-[calc(100dvh-4rem)] max-w-7xl flex-col overflow-y-auto overscroll-contain px-4 py-4 sm:px-6">
               {/* PRODUCT MOBILE */}

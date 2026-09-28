@@ -37,14 +37,32 @@ export function Footer() {
     t("supportLinks.terms"),
   ];
 
+  const socialLinks = [
+    {
+      label: "Instagram",
+      icon: FaInstagram,
+    },
+    {
+      label: "LinkedIn",
+      icon: FaLinkedinIn,
+    },
+    {
+      label: "YouTube",
+      icon: FaYoutube,
+    },
+  ];
+
   return (
-    <footer className="border-t border-slate-200 bg-slate-50">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1.3fr_0.8fr_0.8fr_0.8fr_1.2fr]">
+    <footer className="border-t border-slate-200 bg-neutral-50">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.8fr_0.8fr_1.2fr] lg:gap-12">
           {/* Brand */}
-          <div>
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex size-10 items-center justify-center rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 text-sm font-bold text-white">
+          <div className="sm:col-span-2 lg:col-span-1">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2.5"
+            >
+              <div className="flex size-10 items-center justify-center rounded-xl bg-slate-950 text-sm font-bold text-white">
                 N
               </div>
 
@@ -53,15 +71,18 @@ export function Footer() {
               </span>
             </Link>
 
-            <p className="mt-5 max-w-xs text-sm leading-6 text-slate-500">
+            <p className="mt-5 max-w-sm text-sm leading-6 text-slate-500">
               {t("description")}
             </p>
 
+            {/* Social */}
             <div className="mt-6 flex gap-2">
-              {[FaInstagram, FaLinkedinIn, FaYoutube].map((Icon, index) => (
+              {socialLinks.map(({ label, icon: Icon }) => (
                 <button
-                  key={index}
-                  className="flex size-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 transition-colors hover:border-sky-200 hover:text-[#1597E5]"
+                  key={label}
+                  type="button"
+                  aria-label={label}
+                  className="flex size-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:text-slate-950 hover:shadow-sm"
                 >
                   <Icon size={17} />
                 </button>
@@ -85,16 +106,16 @@ export function Footer() {
           />
 
           {/* Newsletter */}
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <h3 className="text-sm font-semibold text-slate-950">
               {t("newsletter.title")}
             </h3>
 
-            <p className="mt-4 text-sm leading-6 text-slate-500">
+            <p className="mt-4 max-w-md text-sm leading-6 text-slate-500">
               {t("newsletter.description")}
             </p>
 
-            <div className="mt-5 flex overflow-hidden rounded-xl border border-slate-200 bg-white p-1">
+            <div className="mt-5 flex max-w-md overflow-hidden rounded-xl border border-slate-200 bg-white p-1 shadow-sm">
               <input
                 type="email"
                 placeholder={t("newsletter.placeholder")}
@@ -103,7 +124,7 @@ export function Footer() {
 
               <button
                 type="button"
-                className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#1597E5] text-white transition-colors hover:bg-[#0F86CC]"
+                className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-slate-950 text-white transition-colors hover:bg-slate-800"
                 aria-label={t("newsletter.ariaLabel")}
               >
                 <ArrowRight size={16} />
@@ -113,15 +134,21 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-14 flex flex-col gap-4 border-t border-slate-200 pt-7 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-4 border-t border-slate-200 pt-7 text-xs text-slate-400 sm:mt-14 sm:flex-row sm:items-center sm:justify-between">
           <p>{t("copyright")}</p>
 
-          <div className="flex gap-5">
-            <button className="transition-colors hover:text-slate-700">
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
+            <button
+              type="button"
+              className="transition-colors hover:text-slate-700"
+            >
               {t("privacy")}
             </button>
 
-            <button className="transition-colors hover:text-slate-700">
+            <button
+              type="button"
+              className="transition-colors hover:text-slate-700"
+            >
               {t("terms")}
             </button>
           </div>
@@ -148,7 +175,8 @@ function FooterColumn({
         {links.map((link) => (
           <button
             key={link}
-            className="block text-sm text-slate-500 transition-colors hover:text-[#1597E5]"
+            type="button"
+            className="block text-left text-sm text-slate-500 transition-colors hover:text-slate-950"
           >
             {link}
           </button>

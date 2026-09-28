@@ -51,7 +51,7 @@ export function Hero() {
             {t("badge")}
           </div>
 
-          <h1 className="mt-7 text-5xl font-semibold tracking-[-0.05em] text-slate-950 sm:text-6xl lg:text-[72px] lg:leading-[0.98]">
+          <h1 className="mt-7 text-[40px] font-semibold leading-[1.05] tracking-[-0.05em] text-slate-950 sm:text-6xl lg:text-[72px] lg:leading-[0.98]">
             {t("titleLine1")}
             <br />
 
@@ -69,10 +69,10 @@ export function Hero() {
           </p>
 
           {/* CTA */}
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
               href="#pricing"
-              className="inline-flex h-12 items-center gap-2 rounded-full bg-slate-950 px-6 text-sm font-semibold text-white shadow-lg shadow-slate-300/40 transition-all hover:-translate-y-0.5 hover:bg-slate-800"
+              className="inline-flex h-12 w-full max-w-[280px] items-center justify-center gap-2 rounded-full bg-slate-950 px-6 text-sm font-semibold text-white shadow-lg shadow-slate-300/40 transition-all hover:-translate-y-0.5 hover:bg-slate-800 sm:w-auto"
             >
               {t("startFreeTrial")}
               <ArrowRight size={16} />
@@ -80,7 +80,7 @@ export function Hero() {
 
             <Link
               href="#demo"
-              className="inline-flex h-12 items-center rounded-full border border-slate-200 bg-white px-6 text-sm font-semibold text-slate-800 shadow-sm transition-all hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md"
+              className="inline-flex h-12 w-full max-w-[280px] items-center justify-center rounded-full border border-slate-200 bg-white px-6 text-sm font-semibold text-slate-800 shadow-sm transition-all hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md sm:w-auto"
             >
               {t("requestDemo")}
             </Link>

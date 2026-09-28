@@ -62,7 +62,9 @@ export default function SignInPage() {
     return valid;
   }
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(
+    event: FormEvent<HTMLFormElement>,
+  ) {
     event.preventDefault();
 
     if (!validateForm()) return;
@@ -70,7 +72,9 @@ export default function SignInPage() {
     setLoading(true);
     setMessage(null);
 
-    await new Promise((resolve) => setTimeout(resolve, 1400));
+    await new Promise((resolve) =>
+      setTimeout(resolve, 1400),
+    );
 
     setLoading(false);
 
@@ -84,7 +88,9 @@ export default function SignInPage() {
     }, 900);
   }
 
-  function handleSocialLogin(provider: "Google" | "Apple") {
+  function handleSocialLogin(
+    provider: "Google" | "Apple",
+  ) {
     setEmailError("");
     setPasswordError("");
 
@@ -96,19 +102,19 @@ export default function SignInPage() {
 
   return (
     <main className="min-h-[100dvh] bg-white">
-      <div className="grid min-h-[100dvh] lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="grid min-h-[100dvh] xl:grid-cols-[1.05fr_0.95fr]">
         {/* LEFT VISUAL */}
-        <section className="relative hidden overflow-hidden bg-slate-950 p-12 lg:flex lg:flex-col lg:justify-between [@media(max-height:900px)]:p-9 [@media(max-height:780px)]:p-7">
+        <section className="relative hidden overflow-hidden bg-slate-950 p-10 xl:flex xl:flex-col xl:justify-between 2xl:p-12 [@media(max-height:900px)]:p-8 [@media(max-height:780px)]:p-6">
           {/* Background glow */}
-          <div className="absolute -left-32 top-20 size-[500px] rounded-full bg-sky-500/20 blur-[120px]" />
-          <div className="absolute -bottom-40 right-[-100px] size-[500px] rounded-full bg-cyan-400/10 blur-[120px]" />
+          <div className="absolute -left-32 top-20 size-[500px] rounded-full bg-indigo-500/10 blur-[120px]" />
+          <div className="absolute -bottom-40 right-[-100px] size-[500px] rounded-full bg-emerald-400/5 blur-[120px]" />
 
           {/* Logo */}
           <Link
             href="/"
             className="relative z-10 flex w-fit items-center gap-3 text-white"
           >
-            <div className="flex size-10 items-center justify-center rounded-xl bg-[#1597E5] font-bold">
+            <div className="flex size-10 items-center justify-center rounded-xl bg-white text-sm font-bold text-slate-950">
               N
             </div>
 
@@ -117,13 +123,13 @@ export default function SignInPage() {
             </span>
           </Link>
 
-          {/* Main copy */}
+          {/* Main Copy */}
           <div className="relative z-10 max-w-xl">
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-sky-400">
+            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
               {t("left.eyebrow")}
             </p>
 
-            <h1 className="text-5xl font-semibold leading-[1.08] tracking-[-0.045em] text-white xl:text-6xl [@media(max-height:900px)]:text-5xl [@media(max-height:780px)]:text-4xl">
+            <h1 className="text-5xl font-semibold leading-[1.08] tracking-[-0.045em] text-white 2xl:text-6xl [@media(max-height:900px)]:text-5xl [@media(max-height:780px)]:text-4xl">
               {t("left.titleLine1")}
               <br />
               {t("left.titleLine2")}
@@ -155,50 +161,52 @@ export default function SignInPage() {
             </div>
 
             <div className="mt-5 flex h-24 items-end gap-2 [@media(max-height:900px)]:h-20 [@media(max-height:780px)]:mt-3 [@media(max-height:780px)]:h-16">
-              {[38, 50, 42, 70, 58, 82, 68, 90, 76, 100].map(
-                (height, index) => (
-                  <div
-                    key={index}
-                    className="flex-1 rounded-t bg-gradient-to-t from-sky-500 to-cyan-300"
-                    style={{ height: `${height}%` }}
-                  />
-                ),
-              )}
+              {[
+                38, 50, 42, 70, 58, 82, 68, 90, 76, 100,
+              ].map((height, index) => (
+                <div
+                  key={index}
+                  className="flex-1 rounded-t bg-gradient-to-t from-indigo-700 to-indigo-300"
+                  style={{
+                    height: `${height}%`,
+                  }}
+                />
+              ))}
             </div>
           </div>
         </section>
 
         {/* RIGHT AUTH */}
-        <section className="relative flex min-h-[100dvh] items-center justify-center overflow-y-auto px-6 py-10 sm:px-10 lg:px-16 [@media(max-height:900px)]:py-7 [@media(max-height:780px)]:py-5">
+        <section className="relative flex min-h-[100dvh] items-start justify-center overflow-y-auto px-4 pb-10 pt-20 sm:items-center sm:px-8 sm:py-16 xl:px-16">
           {/* Back */}
           <Link
             href="/"
-            className="absolute left-6 top-6 inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition-colors hover:text-slate-900 lg:left-10 lg:top-10"
+            className="absolute left-4 top-5 inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition-colors hover:text-slate-950 sm:left-8 sm:top-7 xl:left-10 xl:top-10"
           >
             <ArrowLeft size={16} />
             {t("back")}
           </Link>
 
           <div className="w-full max-w-[420px]">
-            {/* Mobile Logo */}
+            {/* Mobile / Tablet Logo */}
             <Link
               href="/"
-              className="mb-8 flex items-center gap-2 lg:hidden"
+              className="mb-7 flex items-center gap-2.5 xl:hidden"
             >
-              <div className="flex size-9 items-center justify-center rounded-xl bg-[#1597E5] text-sm font-bold text-white">
+              <div className="flex size-9 items-center justify-center rounded-xl bg-slate-950 text-sm font-bold text-white">
                 N
               </div>
 
-              <span className="font-semibold text-slate-950">
+              <span className="font-semibold tracking-tight text-slate-950">
                 Nexora ERP
               </span>
             </Link>
 
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#1597E5]">
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
               {t("welcome")}
             </p>
 
-            <h2 className="mt-3 text-4xl font-semibold tracking-[-0.035em] text-slate-950 [@media(max-height:780px)]:text-3xl">
+            <h2 className="mt-3 text-[34px] font-semibold leading-[1.08] tracking-[-0.035em] text-slate-950 sm:text-4xl">
               {t("title")}
             </h2>
 
@@ -214,7 +222,7 @@ export default function SignInPage() {
                     ? "border-emerald-200 bg-emerald-50 text-emerald-700"
                     : message.type === "error"
                       ? "border-red-200 bg-red-50 text-red-700"
-                      : "border-sky-200 bg-sky-50 text-sky-700"
+                      : "border-indigo-200 bg-indigo-50 text-indigo-700"
                 }`}
               >
                 {message.type === "success" ? (
@@ -231,7 +239,9 @@ export default function SignInPage() {
             <div className="mt-7 space-y-3 [@media(max-height:900px)]:mt-5 [@media(max-height:780px)]:space-y-2">
               <button
                 type="button"
-                onClick={() => handleSocialLogin("Google")}
+                onClick={() =>
+                  handleSocialLogin("Google")
+                }
                 className="flex h-12 w-full items-center justify-center gap-3 rounded-xl border border-slate-200 bg-white text-sm font-medium text-slate-800 transition-all hover:border-slate-300 hover:bg-slate-50"
               >
                 <FaGoogle size={17} />
@@ -240,7 +250,9 @@ export default function SignInPage() {
 
               <button
                 type="button"
-                onClick={() => handleSocialLogin("Apple")}
+                onClick={() =>
+                  handleSocialLogin("Apple")
+                }
                 className="flex h-12 w-full items-center justify-center gap-3 rounded-xl bg-slate-950 text-sm font-medium text-white transition-all hover:bg-slate-800"
               >
                 <FaApple size={19} />
@@ -289,7 +301,7 @@ export default function SignInPage() {
                   className={`h-12 w-full rounded-xl border bg-white px-4 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 ${
                     emailError
                       ? "border-red-300 focus:border-red-400 focus:ring-4 focus:ring-red-50"
-                      : "border-slate-200 focus:border-[#1597E5] focus:ring-4 focus:ring-sky-100"
+                      : "border-slate-200 focus:border-slate-500 focus:ring-4 focus:ring-slate-100"
                   }`}
                 />
 
@@ -302,7 +314,7 @@ export default function SignInPage() {
 
               {/* Password */}
               <div>
-                <div className="mb-2 flex items-center justify-between">
+                <div className="mb-2 flex items-center justify-between gap-4">
                   <label
                     htmlFor="password"
                     className="text-sm font-medium text-slate-700"
@@ -315,10 +327,12 @@ export default function SignInPage() {
                     onClick={() =>
                       setMessage({
                         type: "info",
-                        text: t("messages.forgotPassword"),
+                        text: t(
+                          "messages.forgotPassword",
+                        ),
                       })
                     }
-                    className="text-xs font-medium text-[#1597E5] hover:text-[#0F86CC]"
+                    className="shrink-0 text-xs font-medium text-slate-600 transition-colors hover:text-slate-950"
                   >
                     {t("forgotPassword")}
                   </button>
@@ -327,27 +341,39 @@ export default function SignInPage() {
                 <div className="relative">
                   <input
                     id="password"
-                    type={showPassword ? "text" : "password"}
+                    type={
+                      showPassword
+                        ? "text"
+                        : "password"
+                    }
                     value={password}
                     onChange={(event) => {
-                      setPassword(event.target.value);
+                      setPassword(
+                        event.target.value,
+                      );
 
                       if (passwordError) {
                         setPasswordError("");
                       }
                     }}
-                    placeholder={t("passwordPlaceholder")}
+                    placeholder={t(
+                      "passwordPlaceholder",
+                    )}
                     className={`h-12 w-full rounded-xl border bg-white px-4 pr-12 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 ${
                       passwordError
                         ? "border-red-300 focus:border-red-400 focus:ring-4 focus:ring-red-50"
-                        : "border-slate-200 focus:border-[#1597E5] focus:ring-4 focus:ring-sky-100"
+                        : "border-slate-200 focus:border-slate-500 focus:ring-4 focus:ring-slate-100"
                     }`}
                   />
 
                   {/* Show / Hide Password */}
                   <button
                     type="button"
-                    onClick={() => setShowPassword((value) => !value)}
+                    onClick={() =>
+                      setShowPassword(
+                        (value) => !value,
+                      )
+                    }
                     className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 transition-colors hover:text-slate-700"
                     aria-label={
                       showPassword
@@ -374,7 +400,7 @@ export default function SignInPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#1597E5] text-sm font-semibold text-white shadow-lg shadow-[#1597E5]/20 transition-all hover:bg-[#0F86CC] disabled:cursor-not-allowed disabled:opacity-70"
+                className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-slate-950 text-sm font-semibold text-white shadow-lg shadow-slate-300/40 transition-all hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {loading ? (
                   <>
@@ -397,10 +423,12 @@ export default function SignInPage() {
                 onClick={() =>
                   setMessage({
                     type: "info",
-                    text: t("messages.freeTrial"),
+                    text: t(
+                      "messages.freeTrial",
+                    ),
                   })
                 }
-                className="font-semibold text-[#1597E5] hover:text-[#0F86CC]"
+                className="font-semibold text-slate-950 transition-colors hover:text-slate-600"
               >
                 {t("startFreeTrial")}
               </button>
